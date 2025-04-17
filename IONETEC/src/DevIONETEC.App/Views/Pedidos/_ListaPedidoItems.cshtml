@@ -1,0 +1,57 @@
+﻿@model IEnumerable<DevIONETEC.App.ViewModels.PedidoItemViewModel>
+ 
+
+<table class="table table-hover">
+    <thead class="table-dark">
+        <tr>
+           @*  <th>Id</th> *@
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th class="text-right">Preço</th>
+            <th class="text-right">Número De Série</th>
+            <th class="text-right">Subtotal</th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+              @*   <td>
+                    @Html.DisplayFor(modelItem => item.ProdutoId)
+                </td> *@
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomeProduto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantidade)
+                </td>
+                <td>
+                    @item.ValorUnitario.ToString("C")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumeroDeSerie)
+                </td>
+
+                <td>
+                    @((item.Quantidade * item.ValorUnitario).ToString("C"))
+                </td>
+                <td class="text-end">
+                    <a asp-controller="Pedidos" asp-action="Delete"
+                       asp-route-Id="@item.Id">
+                        <spam class="fa fa-trash"></spam>
+                     </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" class="text-right">Total:</td>
+            <td colspan="12" class="text-end">
+                @Model.Sum(v => (v.ValorUnitario * v.Quantidade)).ToString("C")
+            </td>
+        </tr>
+    </tfoot>
+</table>

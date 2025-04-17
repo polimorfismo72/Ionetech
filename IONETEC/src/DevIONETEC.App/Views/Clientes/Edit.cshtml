@@ -1,0 +1,78 @@
+﻿@model DevIONETEC.App.ViewModels.ClienteViewModel
+
+@{
+    ViewData["Title"] = "Editar Cliente";
+}
+
+<br />
+<br />
+<div class="container">
+    <h1>@ViewData["Title"]</h1>
+
+    <hr />
+   <form asp-action="Edit">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Id" />
+    <div class="row">
+
+        <div class="form-group col-md-6">
+          
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+          
+                <label asp-for="Nif" class="control-label"></label>
+                <input asp-for="Nif" class="form-control" />
+                <span asp-validation-for="Nif" class="text-danger"></span>
+        
+        </div>
+
+        <div class="form-group col-md-6">
+            <label asp-for="TipoCliente"></label>
+            <div>
+                <input type="radio" value="1" asp-for="TipoCliente" checked="@(Model.TipoCliente == 1)" /> Cliente Físico
+                <input type="radio" value="2" asp-for="TipoCliente" checked="@(Model.TipoCliente == 2)" /> Cliente Jurídico
+            </div>
+            <div>
+                &nbsp;
+            </div> 
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Ativo" /> @Html.DisplayNameFor(model => model.Ativo)
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>
+
+   <div class="row">
+    <div class="form-group col-md-12">
+        <div id="EnderecoContatoTarget">
+            <partial name="_DetalhesEnderecoContato" />
+        </div>
+    </div>
+</div>
+
+  <div id="myModal" class="modal fade in" tabindex="-1" aria-hidden="true" aria-labelledby="myModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id="myModalContent"></div>
+         </div>
+    </div>
+</div>
+
+</div>
+<br />
+<br />
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        $(document).ready(function () {
+            SetModal();
+        });
+    </script>
+}

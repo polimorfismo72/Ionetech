@@ -1,0 +1,20 @@
+﻿@model IEnumerable<DevIONETEC.App.ViewModels.ProdutoViewModel>
+
+@{
+    ViewData["Title"] = "Lista de Produtos";
+}
+
+<br />
+<br />
+<div class="container">
+    <h1>@ViewData["Title"]</h1>
+
+<vc:Summary></vc:Summary>
+<p>
+    <a class="btn btn-info" asp-action="Create">Novo Produto</a>
+</p>
+
+<partial name="_ListaProdutos" />
+</div>
+<br />
+<br />

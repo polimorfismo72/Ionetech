@@ -1,0 +1,68 @@
+﻿@model DevIONETEC.App.ViewModels.PedidoViewModel;
+
+
+@* <vc:Summary></vc:Summary> *@
+<form asp-action="ClinteAdicionar" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="modal-body">
+        <div class="form-group">
+            <label asp-for="Cliente.TipoCliente" class="control-label"></label><br />
+            <input type="radio" value="1" asp-for="Cliente.TipoCliente" checked /> Cliente Físico<br />
+            <input type="radio" value="2" asp-for="Cliente.TipoCliente" /> Cliente Jurídica
+        </div>
+        <h4>Contacto e Endereço</h4>
+        <hr />
+        <div class="form-group col-md-6">
+            <label asp-for="Contato.Email" class="control-label"></label>
+            <input asp-for="Contato.Email" class="form-control" />
+            <span asp-validation-for="Contato.Email" class="text-danger"></span>
+        </div>
+     
+        <div class="row">
+          <br />
+            <div class="form-group col-md-4">
+                <label asp-for="Cliente.Nome" class="control-label"></label>
+                <input asp-for="Cliente.Nome" class="form-control" />
+                <span asp-validation-for="Cliente.Nome" class="text-danger"></span>
+
+                <label asp-for="Cliente.Nif" class="control-label"></label>
+                <input asp-for="Cliente.Nif" class="form-control" />
+                <span asp-validation-for="Cliente.Nif" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-4">
+         
+            <label asp-for="Contato.Telefone" class="control-label"></label>
+            <input asp-for="Contato.Telefone" class="form-control" />
+            <span asp-validation-for="Contato.Telefone" class="text-danger"></span>
+        
+            <label asp-for="Endereco.Bairro" class="control-label"></label>
+            <input asp-for="Endereco.Bairro" class="form-control" />
+            <span asp-validation-for="Endereco.Bairro" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group col-md-4">
+          
+            <label asp-for="Endereco.Municipio" class="control-label"></label>
+            <input asp-for="Endereco.Municipio" class="form-control" />
+            <span asp-validation-for="Endereco.Municipio" class="text-danger"></span>
+        
+            <label asp-for="Endereco.Provincia" class="control-label"></label>
+            <input asp-for="Endereco.Provincia" class="form-control" />
+            <span asp-validation-for="Endereco.Provincia" class="text-danger"></span>
+        
+        </div>
+        </div>
+
+        <div class="modal-footer">
+            <input type="submit" value="Salvar" class="btn btn-success" />
+            <input type="button" class="btn btn-info" value="Fechar" data-bs-dismiss="modal" />
+        </div>
+
+    </div>
+</form>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

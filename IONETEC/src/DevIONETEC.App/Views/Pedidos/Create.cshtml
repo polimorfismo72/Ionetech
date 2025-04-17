@@ -1,0 +1,94 @@
+﻿@model DevIONETEC.App.ViewModels.PedidoViewModel; 
+@{
+    ViewData["Title"] = "Selecione o Cliente Para Adicionar Itens ao Seu Carrinho";
+}
+<br />
+<br />
+<div class="container">
+  <h3 style="padding-top: 50px">@ViewData["Title"] </h3>
+  
+  <hr />
+  
+  <div class="row">
+
+    <div class="col-md-10">
+        <form asp-action="Create">
+            <vc:Summary></vc:Summary>
+
+            <div class="form-group">
+                <label asp-for="ClienteId" class="control-label"></label>
+                <select asp-for="ClienteId" id="ClienteId" class="form-control" asp-items="@(new SelectList(Model.Clientes, "Id", "Nome"))">
+                    <option></option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Nif" class="control-label"></label>
+                <input asp-for="Nif" id="txtNif" readonly="readonly" class="form-control" />
+            </div>
+           
+                <input type="hidden" asp-for="PercentualDesconto" value="0" class="form-control" />
+                <input type="hidden" asp-for="ValorDesconto" value="0" class="form-control" />
+                <input type="hidden" asp-for="ValorTotal" class="form-control" value="0" />
+                <input type="hidden" value="1" asp-for="OperacaoPedidos" checked />
+                <input type="hidden" value="1" asp-for="Situacao" checked />
+                <input type="hidden" value="1" asp-for="TipoPagamento" />
+                <input type="hidden" asp-for="NumeroDeTransacaoDePagamento" class="form-control" value="1233456" />
+                <input type="hidden" asp-for="Ativo" />
+            <br />
+          @*   <partial name="_AdicionarCliente" /> *@
+
+            <div class="form-group">
+                <input type="submit" value="Ir Para O Carrinho" class="btn btn-primary" />
+
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Adicionar Cliente
+                </button>
+
+            </div>
+        </form>
+    </div>
+</div>
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Novo Cliente</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <partial name="_AdicionarCliente" />
+            </div>
+         @*    <div class="modal-footer">
+                <input type="submit" value="Salvar" class="btn btn-success" />
+                <input type="button" class="btn btn-info" value="Fechar" data-bs-dismiss="modal" />
+            </div> *@
+        
+        </div>
+    </div>
+</div>
+</div>
+<br />
+<br />
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        $(document).ready(function () {
+            SetNif();
+        });
+    </script>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+﻿@* @model DevIONETEC.App.ViewModels.ProdutoViewModel *@
+
+@* @model DevIONETEC.App.ViewModels.PedidoItemViewModel;*@
+
+@model DevIONETEC.App.ViewModels.PedidoViewModel;
+
+
+<input type="hidden" asp-for="Produto.Id" value="@ViewBag.ProdutoId" readonly="readonly" class="form-control" />
+<input type="hidden" asp-for="Produto.QuantidadeEstoque" value="@ViewBag.QuantidadeEstoque" class="form-control" />
+
+@* <input type="hidden" asp-for="Id" value="@ViewBag.ProdutoId" readonly="readonly" class="form-control" />
+<input type="hidden" asp-for="QuantidadeEstoque" value="@ViewBag.QuantidadeEstoque" class="form-control" /> *@
+            
+
+

@@ -1,0 +1,57 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+<style>
+    .btn-login {
+        background-color: #E30018;
+        background: #E30018;
+        padding-top: 100%;
+        height: auto;
+        margin-top: 0em;
+        position: relative;
+    }
+
+        .btn-login:hover {
+            border: 2px solid #E30018;
+            color: #FFFFFF;
+        }
+</style>
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <a class="nav-item nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacidade</a>
+    <div class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Cadastros</a>
+        <div class="dropdown-menu bg-light m-0">
+            <a asp-controller="Fornecedores" asp-action="Index" class="dropdown-item">Fornecedores</a>
+            <a asp-controller="Produtos" asp-action="Index" class="dropdown-item">Produtos</a>
+            <a asp-controller="Clientes" asp-action="Index" class="dropdown-item">Clientes</a>
+            <a asp-controller="Pedidos" asp-action="Index" class="dropdown-item">Pedidos</a>
+            <a asp-controller="Pedidos" asp-action="Create" class="dropdown-item">Vendas</a>
+            <a asp-controller="Home" asp-action="About" class="dropdown-item">Testimonial</a>
+            <a asp-controller="Home" asp-action="About" class="dropdown-item">404 Page</a>
+        </div>
+    </div>
+    <li class="nav-item">
+       @* <a class="nav-link text-dark" asp-controller="account" asp-action="Logout" title="Manage">Olá @User.Identity?.Name!</a> *@
+        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
+    </li>
+    <li class="nav-item">
+        <form class="form-inline" asp-controller="account" asp-action="Logout" asp-route-returnUrl="@Url.Action("Index", "Home")">
+            <button type="submit" class="nav-link btn btn-link text-dark">Sair</button>
+        </form>
+    </li>
+}
+
+else
+{
+    <li class="nav-item">
+    @* <a class="nav-link" asp-controller="account" asp-action="Registro">Criar Conta</a> *@
+     <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register" title="Manage">Criar Conta</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link text-white  btn d-inline p-6 d-lg-block" asp-controller="account" asp-action="Login" style="background-color: #E30018;padding:0;margin-top: 22%; width:110%; text-align:center;">Login</a>
+    </li>
+}

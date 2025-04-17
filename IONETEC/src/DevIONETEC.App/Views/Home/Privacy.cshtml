@@ -1,0 +1,607 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "Privacy Policy";
+}
+    <style>
+    .container {
+            width: 783px!important;
+            height: 1122px !important;
+            margin: auto;
+            position: relative;        
+            background-color: #FFFFFF;
+            top: 0px;
+    }
+
+    body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(255, 204, 209);
+            padding: 10px;
+            color: #000000;
+    }
+
+    p.title {
+            font-weight: bold;
+    }
+
+    p.title2 {
+            font-weight: bold;
+            color: #03A99F;
+            font-size: 20px;
+    }
+
+    p.text, p.text-empresa {
+        font-size: 11px;
+        font-weight: bold;
+    }
+    
+    p.text {
+            color: #858585;
+    }
+
+    p.text-empresa {
+        color: #000000;
+    }
+    p.text-cliente {
+        font-size: 13px;
+        font-weight: bold;
+        color: #000000;
+    }
+    p.text1 {
+        font-size: 12px;
+         font-weight: 100;
+        font-weight: bold;
+        color: #000000;
+    }
+    p{
+            margin: 0px;
+            font-weight: bold;
+    }
+    .tbth {
+            text-align: center;
+    }
+
+    table.tbproductos {
+            border-collapse: separate;
+            border-spacing: 4px;
+           /*  border: 0.5px solid; */
+    }
+
+    .tbprod, .tbprod1, .tbprod2, .tbprod-servico {
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 11px;
+     border: 0.5px solid;
+     border-collapse: collapse;
+    }
+
+    .tbprod-servico {
+        text-align: left;
+        padding: 2px;
+    }
+
+    .tbprod {
+        text-align: center;
+    }
+
+    .tdartigo, .tdartigo1, .tbprod {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        border-collapse: collapse;
+        padding: 2px;
+    }
+
+    .tdartigo, .tdartigo1 {
+        border-left: 1px solid;
+    }
+
+    .tdartigo {
+        text-align: center;
+    }
+
+    .tdartigo1 {
+        text-align: left;
+    }
+
+    .tbprod1, .tbprod2, .tbprod3 {
+        height: 15px;
+    }
+
+    .tbprod2 {
+        /* font-size: 12px;
+        border: 1px solid;
+        border-collapse: collapse; */
+      /*   height: 15px; */
+        text-align: center;
+    }
+
+    .tbprod3 {
+        font-size: 12px;
+        border: 0px;
+        border-collapse: collapse;
+       /*  height: 15px; */
+    }
+
+    .thtotal {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        border: 1px solid;
+        border-collapse: collapse;
+        width: 130px;
+    }
+
+    table.tbproductos tbody tr td {
+        padding: 10px;
+    }
+
+    .tr-head {
+        border-bottom: 1px solid; 
+        border-collapse: collapse;
+        font-size: 12px;
+    }
+
+    .t-head {
+             border: hidden;
+             border-left: 1px solid;
+             border-right: 1px solid;
+    }
+
+    .item-2 {
+            font-size: 15px;
+            font-weight: bold;
+            color: #757575;
+    }
+
+    .item-3 {
+            font-size: 15px;
+            font-weight: bold;
+            background-color: #03A99F;
+            color: white;
+    }
+
+    .td-it {
+         border: 1px solid;
+    }
+
+    .td-i {
+       text-align:center;
+        border: 1px solid;
+    }
+
+    </style>
+
+
+ <div class="container">
+        @* Cabeçalho-Imagens do Logo *@
+        <table style="width:100%">
+            <tr>
+                <td>
+                <img src="~/imagens/logo/logo-Ionetech.png"
+                style="width: 10%; height: 6%; top: 91px;left: 59px;position: absolute;" /> 
+               
+                </td>
+            <td style="margin-right:0;margin-left:auto; right:auto;">
+                <img src="~/imagens/logo/qrcode.png"
+                     style="width: 10%; height: 7%; top: 95px; right: 85px;position: absolute;" />
+            </td>
+         
+            </tr>
+        </table>
+        <br />
+       @* Informação sobre a empresa *@
+        <table style="width:90%; top: 149px;left: 55px;position: absolute;  font-size: 5px;">
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                        <td><p class="text">NIF.: 5001303155</p></td>
+                        </tr>
+                        <tr>
+                          <td><p class="text">Centro Logístico de Talatona, Via C3A, Armazém n.º A12, Talatona</p></td>
+                        </tr>
+                        <tr>
+                        <td><p class="text">Tel: (+244) 929 28 38 38 Fax: (+244) 000 00 00 00</p></td>
+                        </tr>
+                        <tr>
+                        <td><p class="text">Tel: (+244) 929 28 38 38 Fax: (+244) 000 00 00 00</p></td>
+                        </tr>
+
+                         <tr>
+                             <td><p class="text">Capital Social : AOA 250.000.000,00</p></td>
+                         </tr>
+                         <tr>
+                             <td><p class="text">Registo Comercial: 53563-22/221219</p></td>
+                         </tr>
+                         <tr>
+                             <td><p class="text">geral@ionetech-ao.com</p></td>
+                         </tr>
+                           <tr>
+                             <td><p class="text">www.ionetech-ao.com</p></td>
+                         </tr>
+                         
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        @* Informação sobre o cliente *@
+   @*  <table style="width:100%; top: 170px; left: 467px;position: absolute;  font-size: 5px;"> *@
+        <table style="top: 170px; left: 467px;position: absolute;  font-size: 5px;">
+        <tr>
+            <td style="text-align:right;width:10%;">
+                <table>
+                    <tr>
+                        <td><p class="text">Exmo.(s) Sr.(s) </p></td>
+                    </tr>
+                    <tr>
+                        <td><p class="text-cliente">SIE - Serviço de Inteligência Externa</p></td>
+                    </tr>
+                    <tr>
+                        <td><p class="text">Estradada Direita do Camama</p></td>
+                    </tr>
+                    <tr>
+                        <td><p class="text">Luanda</p></td>
+                    </tr>
+                </table>
+            </td>
+            
+        </tr>
+       </table>
+
+        @* Assunto do Documento *@
+        <div style="width:100%; top: 360px; right: 90px;position: absolute;  font-size: 5px;text-align:right;">
+        <p class="text-empresa" style="font-weight: 900;">Factura PRÓ-FORMA PP FP.2023A/693 </p>
+        </div>
+    <br />
+    <br />
+        @* Primeira tabela-Requisição *@
+    <table style="width:50%; top: 380px; right: 90px;position: absolute; font-size: 10px; border: 0.5px solid;border-collapse: collapse;text-align:right;">
+        <tr>
+            <th class="tbprod"> Requisição </th>
+            <th  class="tbprod">Moeda</th>
+            <th  class="tbprod">Câmbio</th>
+            <th  class="tbprod">Data</th>
+            <th  class="tbprod">Vencimento</th>
+        </tr>
+        <tr>
+            <td class="tbprod">   </td>
+            <td  class="tbprod"> AKZ </td>
+            <td  class="tbprod"> 896,16 </td>
+            <td  class="tbprod"> 10/11/2023 </td>
+            <td  class="tbprod"> 17/11/2023 </td>
+        </tr>
+
+    </table>
+         @* Segunda tabela-V/N.º Contrib *@
+    <table style="width:80%; top: 423px; right: 90px;position: absolute;
+    font-size: 10px; border: 0.5px solid;border-collapse: collapse;text-align:right;">
+        <tr>
+            <th class="tbprod"> V/N.º Contrib</th>
+            <th class="tbprod">Desc. Cli.</th>
+            <th class="tbprod">Condição Pagamento</th>
+            <th class="tbprod">Desc. Fin</th>
+            <th class="tbprod">Nada</th>
+            <th class="tbprod">Zona</th>
+            <th class="tbprod">Vend.</th>
+            <th class="tbprod">Pag</th>
+        </tr>
+        <tr>
+            <td class="tbprod">0</td>
+            <td class="tbprod"> 0.00 </td>
+            <td class="tbprod"> Pronto Pagamento </td>
+            <td class="tbprod"> 0.00 </td>
+            <td class="tbprod">  </td>
+            <td class="tbprod"> </td>
+            <td class="tbprod"> </td>
+            <td class="tbprod">1/1</td>
+        </tr>
+
+    </table>
+        
+    @* Terceira tabela-Item da Fatura *@
+
+    <table style="width:80%;right: 90px; top: 473px;position: absolute;border: 1px solid;border-collapse: collapse;">
+    @* <table style="width:80%;right: 90px; top: 473px;position: absolute; border-bottom: 1px solid;border: 1px solid;border-collapse: collapse;">  *@
+        <thead>
+            <tr @*class="tr-head"*@>
+                <th class="tbprod"><p>Artigo</p></th>
+                <th class="tbprod"><p>Descrição</p></th>
+                <th class="tbprod"><p>Qtd</p></th>
+                <th class="tbprod"><p>Pr. Unit</p></th>
+                <th class="tbprod"><p>IV</p></th>
+                <th class="thtotal"><p>Total Líquido</p></th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                // foreach (var item in Model.detalleventa)
+                // {
+                <tr>
+                    <td class="tdartigo"><p>W2210A</p></td>
+                    <td class="tdartigo1"><p>Toner HP 207A M255/MFP Preto - W2210A - (1400 Pág)</p></td>
+                    <td class="tdartigo"><p>1</p></td>
+                    <td class="tdartigo"><p>75 989,85</p></td>
+                    <td class="tdartigo"><p>14%</p></td>
+                    <td class="tdartigo"><p> 75 989,85</p></td>
+                </tr>
+                <tr>
+                    <td class="tdartigo"><p>W2210A</p></td>
+                   <td class="tdartigo1"><p>Toner HP 207A M255/MFP Preto - W2210A - (1400 Pág)</p></td>
+                    <td class="tdartigo"><p>1</p></td>
+                    <td class="tdartigo"><p>75 989,85</p></td>
+                    <td class="tdartigo"><p>14%</p></td>
+                    <td class="tdartigo"><p> 75 989,85</p></td>
+                </tr>
+                <tr>
+                    <td class="tdartigo"><p>W2210A</p></td>
+                   <td class="tdartigo1"><p>Toner HP 207A M255/MFP Preto - W2210A - (1400 Pág)</p></td>
+                    <td class="tdartigo"><p>1</p></td>
+                    <td class="tdartigo"><p>75 989,85</p></td>
+                    <td class="tdartigo"><p>14%</p></td>
+                    <td class="tdartigo"><p> 75 989,85</p></td>
+                </tr>
+
+                <tr>
+                    <td class="tdartigo"><p>W2210A</p></td>
+                   <td class="tdartigo1"><p>Toner HP 207A M255/MFP Preto - W2210A - (1400 Pág)</p></td>
+                    <td class="tdartigo"><p>1</p></td>
+                    <td class="tdartigo"><p>75 989,85</p></td>
+                    <td class="tdartigo"><p>14%</p></td>
+                    <td class="tdartigo"><p> 75 989,85</p></td>
+                </tr>
+                <tr>
+                    <td class="tdartigo"><p>W2210A</p></td>
+                   <td class="tdartigo1"><p>Toner HP 207A M255/MFP Preto - W2210A - (1400 Pág)</p></td>
+                    <td class="tdartigo"><p>1</p></td>
+                    <td class="tdartigo"><p>75 989,85</p></td>
+                    <td class="tdartigo"><p>14%</p></td>
+                    <td class="tdartigo"><p> 75 989,85</p></td>
+                </tr>
+                <tr>
+                    <td class="tdartigo"><p>W2210A</p></td>
+                   <td class="tdartigo1"><p>Toner HP 207A M255/MFP Preto - W2210A - (1400 Pág)</p></td>
+                    <td class="tdartigo"><p>1</p></td>
+                    <td class="tdartigo"><p>75 989,85</p></td>
+                    <td class="tdartigo"><p>14%</p></td>
+                    <td class="tdartigo"><p> 75 989,85</p></td>
+                </tr>
+                <tr>
+                    <td class="tdartigo"><p>W2210A</p></td>
+                   <td class="tdartigo1"><p>Toner HP 207A M255/MFP Preto - W2210A - (1400 Pág)</p></td>
+                    <td class="tdartigo"><p>1</p></td>
+                    <td class="tdartigo"><p>75 989,85</p></td>
+                    <td class="tdartigo"><p>14%</p></td>
+                    <td class="tdartigo"><p> 75 989,85</p></td>
+                </tr>
+                <tr>
+                    <td class="tdartigo"><p>W2210A</p></td>
+                   <td class="tdartigo1"><p>Toner HP 207A M255/MFP Preto - W2210A - (1400 Pág)</p></td>
+                    <td class="tdartigo"><p>1</p></td>
+                    <td class="tdartigo"><p>75 989,85</p></td>
+                    <td class="tdartigo"><p>14%</p></td>
+                    <td class="tdartigo"><p> 75 989,85</p></td>
+                </tr>
+                <tr>
+                    <td class="tdartigo"><p>W2210A</p></td>
+                   <td class="tdartigo1"><p>Toner HP 207A M255/MFP Preto - W2210A - (1400 Pág)</p></td>
+                    <td class="tdartigo"><p>1</p></td>
+                    <td class="tdartigo"><p>75 989,85</p></td>
+                    <td class="tdartigo"><p>14%</p></td>
+                    <td class="tdartigo"><p> 75 989,85</p></td>
+                </tr>
+
+                <tr>
+                    <td class="tdartigo"><p>W2210A</p></td>
+                   <td class="tdartigo1"><p>Toner HP 207A M255/MFP Preto - W2210A - (1400 Pág)</p></td>
+                    <td class="tdartigo"><p>1</p></td>
+                    <td class="tdartigo"><p>75 989,85</p></td>
+                    <td class="tdartigo"><p>14%</p></td>
+                    <td class="tdartigo"><p> 75 989,85</p></td>
+                </tr>
+                <tr>
+                    <td class="tdartigo"><p>W2210A</p></td>
+                   <td class="tdartigo1"><p>Toner HP 207A M255/MFP Preto - W2210A - (1400 Pág)</p></td>
+                    <td class="tdartigo"><p>1</p></td>
+                    <td class="tdartigo"><p>75 989,85</p></td>
+                    <td class="tdartigo"><p>14%</p></td>
+                    <td class="tdartigo"><p> 75 989,85</p></td>
+                </tr>
+                <tr>
+                    <td class="tdartigo"><p>W2210A</p></td>
+                   <td class="tdartigo1"><p>Toner HP 207A M255/MFP Preto - W2210A - (1400 Pág)</p></td>
+                    <td class="tdartigo"><p>1</p></td>
+                    <td class="tdartigo"><p>75 989,85</p></td>
+                    <td class="tdartigo"><p>14%</p></td>
+                    <td class="tdartigo"><p> 75 989,85</p></td>
+                </tr>
+                <tr>
+                    <td class="tdartigo"><p>W2210A</p></td>
+                   <td class="tdartigo1"><p>Toner HP 207A M255/MFP Preto - W2210A - (1400 Pág)</p></td>
+                    <td class="tdartigo"><p>1</p></td>
+                    <td class="tdartigo"><p>75 989,85</p></td>
+                    <td class="tdartigo"><p>14%</p></td>
+                    <td class="tdartigo"><p> 75 989,85</p></td>
+                </tr>
+                <tr>
+                    <td class="tdartigo"><p>W2210A</p></td>
+                   <td class="tdartigo1"><p>Toner HP 207A M255/MFP Preto - W2210A - (1400 Pág)</p></td>
+                    <td class="tdartigo"><p>1</p></td>
+                    <td class="tdartigo"><p>75 989,85</p></td>
+                    <td class="tdartigo"><p>14%</p></td>
+                    <td class="tdartigo"><p> 75 989,85</p></td>
+                </tr>
+                <tr>
+                    <td class="tdartigo"><p>W2210A</p></td>
+                   <td class="tdartigo1"><p>Toner HP 207A M255/MFP Preto - W2210A - (1400 Pág)</p></td>
+                    <td class="tdartigo"><p>1</p></td>
+                    <td class="tdartigo"><p>75 989,85</p></td>
+                    <td class="tdartigo"><p>14%</p></td>
+                    <td class="tdartigo"><p> 75 989,85</p></td>
+                </tr>
+                <tr>
+                    <td class="tdartigo"><p>W2210A</p></td>
+                   <td class="tdartigo1"><p>Toner HP 207A M255/MFP Preto - W2210A - (1400 Pág)</p></td>
+                    <td class="tdartigo"><p>1</p></td>
+                    <td class="tdartigo"><p>75 989,85</p></td>
+                    <td class="tdartigo"><p>14%</p></td>
+                    <td class="tdartigo"><p> 75 989,85</p></td>
+                </tr>
+            
+                // }
+              }
+        </tbody>
+
+    </table>
+    
+     @* Div-validação da fatura *@
+     <div style="width:100%; top: 750px; left: 67px;position: absolute;  font-size: 10px; font-weight: 200;">
+        <p>S010-Processado por programa validado n.º 41/AGT/2019 | Os bens e/ou serviços foram colocados à disposição do </p>
+    </div>
+    @* Informação sobre o cliente *@
+    <table style="width:100%; top: 764px; left: 410px;position: absolute;  font-size: 5px;">
+       <tr>
+       <td style="text-align:right">
+       <table>
+       <tr>
+       <td><p class="text1">Mercadoria/Serviço</p></td>
+       </tr>
+       <tr>
+       <td><p class="text1">Descontos Comerciais</p></td>
+       </tr>
+       <tr>
+       <td><p class="text1">Desconto Financeiro</p></td>
+       </tr>
+       <tr>
+       <td><p class="text1">Portes</p></td>
+       </tr>
+       <tr>
+       <td><p class="text1">Outros Serviços</p></td>
+       </tr>
+       <tr>
+       <td><p class="text1">Adiantamentos</p></td>
+       </tr>
+       <tr>
+       <td><p class="text1">IVA</p></td>
+       </tr>
+       <tr>
+       <td><p class="text1">Acerto</p></td>
+       </tr>
+       <tr>
+       <td><p class="text1"> </p></td>
+       </tr>
+       <tr>
+       <td><p class="text1">Total Factura ( AKZ )</p></td>
+       </tr>
+       <tr>
+       <td><p class="text1">Total a Receber</p></td>
+       </tr>
+       <tr>
+       <td><p class="text1">Contra-valor € (EUR)</p></td>
+       </tr>
+    </table>
+    </td>
+
+    </tr>
+    </table>
+    @* Mercadoria/Serviço *@
+    <table style="width:17%; top: 770px; left: 559px;position: absolute; font-size: 10px; border: 0.5px solid;border-collapse: collapse;text-align:right;">
+       
+        <tr>
+            <td class="tbprod-servico">870 689,76</td>
+        </tr>
+        <tr>
+            <td class="tbprod-servico">0.00</td>
+        </tr>
+        <tr>
+            <td class="tbprod-servico">0.00</td>
+        </tr>
+        <tr>
+            <td class="tbprod-servico">0.00</td>
+        </tr>
+        <tr>
+            <td class="tbprod-servico">0.00</td>
+        </tr>
+        <tr>
+            <td class="tbprod-servico">0.00</td>
+        </tr>
+        <tr>
+            <td class="tbprod-servico">121 896,57</td>
+        </tr>
+        <tr>
+            <td class="tbprod-servico">0.00</td>
+        </tr>
+        <tr>
+            <td class="tbprod1">   </td>
+        </tr>
+        <tr>
+            <td class="tbprod-servico">992 586,33</td>
+        </tr>
+        <tr>
+            <td class="tbprod-servico">992 586,33</td>
+        </tr>
+        <tr>
+            <td class="tbprod-servico">1 107,60</td>
+        </tr>
+    </table>
+    
+     @* COORDENADAS BANCÁRIAS *@
+    <table style="width:100%; top: 786px; left: 55px;position: absolute;  font-size: 5px;">
+        <tr>
+            <td style="text-align:right">
+                <table>
+                    <tr>
+                        <td><p class="text1">COORDENADAS BANCÁRIAS</p></td>
+                    </tr>
+                    <tr>
+                        <td><p class="text1">IBAN:</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="~/imagens/logo/Logo-Banco-Bai.png" />
+                           <p class="text1">235637296.10.001  |  AO06 0040 0000 3563 7296 1018 </p>
+                       </td>
+                    </tr>
+                    <tr>
+                        <td><p class="text1">IBAN:</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="~/imagens/logo/Logo-Banco-Yetu.png" />
+                            <p class="text1">5315439.10.001  |  AO06 0066 0000 0531 5439 1014 0</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+        </tr>
+    </table>
+
+    @* Quinta tabela-Quadro Retenção de Imposto*@
+    <table style="text-align:center;width:35%;top: 952px; left: 55px;position: absolute; font-size: 10px; border: 0.5px solid;border-collapse: collapse;">
+
+        <tr style="text-align:center;">
+
+            <th style="text-align:center;">Quadro Retenção de Imposto da Lei 7/97</th> 
+@*             <td style="text-align:center;">Quadro Retenção de Imposto da Lei 7/97 | Quadro Retenção de Imposto da Lei 7/97</td> *@
+        </tr>
+        <tr>
+            <th class="tbprod2">Entidade</th>
+            <th class="tbprod2">Inc.</th>
+            <th class="tbprod2">%</th>
+            <th class="tbprod2">Valor</th>
+        </tr>
+        <tr>
+            <th class="tbprod2"></th>
+            <th class="tbprod2"></th>
+            <th class="tbprod2"></th>
+            <th class="tbprod2"></th>
+        </tr>
+        <tr>
+            <td style="padding: 2px; visibility: hidden;"> oo </td>
+        </tr>
+
+    </table>
+
+ </div>
+
+
+
+

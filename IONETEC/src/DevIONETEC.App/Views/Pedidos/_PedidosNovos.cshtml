@@ -1,0 +1,54 @@
+﻿@model IEnumerable<DevIONETEC.App.ViewModels.PedidoViewModel>
+
+@{
+    ViewData["Title"] = "Novo Pedido";
+}
+
+<h1>@ViewData["Title"]</h1>
+<hr />
+
+<table class="table table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cliente.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PercentualDesconto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorDesconto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorTotal)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Where(c => c.Ativo == false))
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cliente.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PercentualDesconto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ValorDesconto)
+                </td>
+                <td>
+                    @item.ValorTotal.ToString("C")
+                </td>
+
+                <td class="text-end">
+                    <a class="btn btn-warning" asp-controller="Pedidos" asp-action="Edit" asp-route-id="@item.Id"><spam class="fa fa-shopping-cart"></spam></a>
+                    <a class="btn btn-danger" asp-controller="Pedidos" asp-action="ApagarPedido" asp-route-id="@item.Id"><spam class="fa fa-trash"></spam></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

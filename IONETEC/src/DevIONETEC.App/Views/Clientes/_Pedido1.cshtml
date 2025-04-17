@@ -1,0 +1,78 @@
+﻿@model DevIONETEC.App.ViewModels.PedidoViewModel
+
+
+@{
+    ViewData["Title"] = "Compra do Cliente";
+}
+
+<h1>@ViewData["Title"]</h1>
+<hr />
+<form asp-action="Carrinho">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Id" />
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                Desconto Percentual
+                <input asp-for="PercentualDesconto" value="0" class="form-control" />
+                <span asp-validation-for="PercentualDesconto" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                Valor Desconto
+                <input asp-for="ValorDesconto" value="0" class="form-control" />
+                <span asp-validation-for="ValorDesconto" class="text-danger"></span>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="form-group">
+                Total
+                <input asp-for="ValorTotal" class="form-control" value="0" />
+                <span asp-validation-for="ValorTotal" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        &nbsp;
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                Situacao<br />
+                    <input type="radio" value="1" asp-for="Situacao" checked="@(Model.Situacao == 1)" /> Aberto<br />
+                    <input type="radio" value="2" asp-for="Situacao" checked="@(Model.Situacao == 2)" /> Finalizado <br />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                Tipo de Pagamento<br />
+                    <input type="radio" value="1" asp-for="TipoPagamento" checked="@(Model.TipoPagamento == 1)" /> Pagamento a prazo<br />
+                    <input type="radio" value="2" asp-for="TipoPagamento" checked="@(Model.TipoPagamento == 2)" /> Pagamento a Dinheiro<br />
+                    <input type="radio" value="3" asp-for="TipoPagamento" checked="@(Model.TipoPagamento == 3)" /> Pagamento por Transferencia<br />
+                    <input type="radio" value="4" asp-for="TipoPagamento" checked="@(Model.TipoPagamento == 4)" /> Pagamento Parcelado
+              
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                Número Da Transacao DePagamento
+                <input asp-for="NumeroDeTransacaoDePagamento" class="form-control" value="1233456" />
+                <span asp-validation-for="NumeroDeTransacaoDePagamento" class="text-danger"></span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+                   <br />
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>

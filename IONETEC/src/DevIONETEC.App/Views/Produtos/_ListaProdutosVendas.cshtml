@@ -1,0 +1,56 @@
+﻿@model IEnumerable<DevIONETEC.App.ViewModels.ProdutoViewModel>
+
+
+<table class="table table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Fabricante)
+            </th>
+            <th>
+                Preço
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuantidadeEstoque)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="~/imagens/@item.Imagem" alt="@item.Imagem" style="width: 100px; height: 90px" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fabricante.Nome)
+                </td>
+                <td>
+                    @* @Html.DisplayFor(modelItem => item.ValorVenda) *@
+                    @item.ValorVenda.ToString("C")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuantidadeEstoque)
+                </td>
+
+                <td class="text-end">
+                    @* <a class="btn btn-info" asp-controller="PedidoCompra" asp-action="Details" asp-route-id="@item.Id"><spam class="fa fa-search"></spam></a> *@
+                    <a class="btn btn-primary" asp-controller="PedidoItems" asp-action="Carrinho" asp-route-id="@item.Id">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

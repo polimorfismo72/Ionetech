@@ -1,0 +1,33 @@
+﻿@model DevIONETEC.App.ViewModels.ClienteViewModel
+@{
+    ViewData["Title"] = "Atualizar Endereço e Contacto";
+}
+
+<div class="modal-header">
+
+    <h4 class="modal-title" id="myModalLabel">@ViewData["Title"]</h4>
+    <button type="button" class="close" data-bs-dismiss="modal">
+        <span aria-hidden="true">×</span><span class="sr-only">Fechar</span>
+    </button>
+</div>
+
+<form asp-action="AtualizarEnderecoContato">
+    <div class="modal-body">
+
+        <input type="hidden" asp-for="Endereco.ClienteId" />
+        <input type="hidden" asp-for="Endereco.Id" />
+        <input type="hidden" asp-for="Contato.ClienteId" />
+        <input type="hidden" asp-for="Contato.Id" />
+        <partial name="_EnderecoContato" />
+
+        <div class="modal-footer">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Atualizar Endereço e Contacto" class="btn btn-success" />
+                <input type="button" class="btn btn-info" value="Fechar" data-bs-dismiss="modal" />
+            </div>
+        </div>
+
+    </div>
+</form>
+
+

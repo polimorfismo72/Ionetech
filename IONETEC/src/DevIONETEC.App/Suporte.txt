@@ -1,0 +1,28 @@
+﻿https://elmah.io/ -- monitorar os erros e notificações da sua aplicação 
+
+User Claims
+Produtos, AD,VI,ED,EX
+Fornecedores, AD,VI,ED,EX
+Clientes, AD,VI,ED,EX
+Categorias, AD,VI,ED,EX
+Pedidos, AD,VI,ED,EX
+AD
+VI
+AD,VI,ED
+AD,VI,ED,EX
+-----------------------------------------------------
+Código para Verificar o comportamento da model
+if (!ModelState.IsValid)
+{
+  foreach (ModelStateEntry modelstate in ViewData.ModelState.Values)
+  {
+    foreach (ModelError modelError in modelstate.Errors)
+    {
+      string errormassage = modelError.ErrorMessage;
+    }
+  }
+  return RedirectToAction("Edit");
+}
+
+
+	 

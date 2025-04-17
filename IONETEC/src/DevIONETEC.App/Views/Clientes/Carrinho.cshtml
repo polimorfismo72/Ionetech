@@ -1,0 +1,54 @@
+﻿@model DevIONETEC.App.ViewModels.ClienteViewModel
+
+@{
+    ViewData["Title"] = "Compra do Cliente";
+}
+<br />
+<br />
+<div class="container">
+    <h1>@ViewData["Title"]</h1>
+
+    <hr />
+    <form asp-action="Carrinho">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @*   <input type="hidden" asp-for="Pedido.ClienteId" value="@ViewBag.Id" /> *@
+        <input type="hidden" asp-for="Id" />
+        <div class="row">
+
+            <div class="form-group col-md-12">
+                @*value="@ViewBag.Nome"*@
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" readonly="readonly" />
+            </div>
+
+
+        </div>
+        <br />
+        <h4>Pedido</h4>
+        <hr />
+
+        @* <partial name="_Pedido" /> *@
+        <br />
+        <div class="form-group">
+            <input type="submit" value="Save" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
+
+<br />
+<br />
+
+ @section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(function () {
+            SetPreco();
+        });
+        $(document).ready(function () {
+            SetPrecoPer();
+        });
+       
+    </script>
+} 

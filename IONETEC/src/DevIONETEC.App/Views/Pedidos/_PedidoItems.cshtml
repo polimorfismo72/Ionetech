@@ -1,0 +1,47 @@
+﻿@model DevIONETEC.App.ViewModels.PedidoViewModel;
+
+<input type="hidden" asp-for="PedidoItem.PedidoId" value="@ViewBag.Id" readonly="readonly" class="form-control" />
+<input type="hidden" asp-for="PedidoItem.NomeProduto" value="produto" class="form-control" />
+<input type="hidden" asp-for="PedidoItem.VendedorId"  class="form-control" />
+
+<div class="row">
+    <div class="form-group col-md-6">
+
+        <label asp-for="PedidoItem.ProdutoId" class="control-label"></label>
+        <select asp-for="PedidoItem.ProdutoId" id="ProdutoId" class="form-control"
+         asp-items="@(new SelectList(ViewBag.Produro, "Value","Text"))">
+        @* <option></option> *@
+        </select> 
+
+      
+        <span asp-validation-for="PedidoItem.ProdutoId" class="text-danger"></span>
+        
+        <label asp-for="PedidoItem.Quantidade" class="control-label"></label>
+        <input asp-for="PedidoItem.Quantidade" min="1" value="5" class="form-control" />
+        <span asp-validation-for="PedidoItem.Quantidade" class="text-danger"></span>
+
+
+    </div>
+
+    <div class="form-group col-md-6">
+       @*  <label asp-for="PedidoItem.ValorUnitario" class="control-label"></label> *@
+        <input type="hidden" asp-for="PedidoItem.ValorUnitario" value="2000" readonly="readonly" class="form-control" />
+        
+        <span asp-validation-for="PedidoItem.ValorUnitario" class="text-danger"></span>
+
+        <label asp-for="PedidoItem.NumeroDeSerie" class="control-label"></label>
+        <input asp-for="PedidoItem.NumeroDeSerie" value="326598741" class="form-control" />
+        <span asp-validation-for="PedidoItem.NumeroDeSerie" class="text-danger"></span>
+
+       
+       @*  <label asp-for="PedidoItem.VendedorId" class="control-label"></label>
+        <select asp-for="PedidoItem.VendedorId" class="form-control"
+                asp-items="@(new SelectList(ViewBag.Vendedor, "Value","Text"))"> 
+        </select>
+        <span asp-validation-for="PedidoItem.VendedorId" class="text-danger"></span>
+ *@
+    </div>
+</div>
+          
+ <br />
+
